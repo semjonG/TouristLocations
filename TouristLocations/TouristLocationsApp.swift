@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TouristLocationsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      CategoryView()
+        .preferredColorScheme(.dark)
     }
+  }
 }
