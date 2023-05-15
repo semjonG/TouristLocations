@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryView: View {
-  @ObservedObject var viewModel = CategoryViewModel()
+  @ObservedObject var viewModel = MainViewModel()
   
   var body: some View {
     NavigationView {
@@ -25,7 +25,7 @@ struct CategoryView: View {
           title: Text("Unable to load Data"),
           message: Text(e.error.description),
           primaryButton: .default(Text("Retry"), action: {
-            self.viewModel.fetch()
+            self.viewModel.fetchData()
           }),
           secondaryButton: .cancel()
         )
@@ -38,7 +38,7 @@ struct CategoryView: View {
   private var categories: some View {
     List(viewModel.categories) { category in
       NavigationLink(
-        destination: LocationsView(model: viewModel.tours.filter { $0.type == category.type }),
+        destination: LocationsView(model: viewModel.locations.filter { $0.type == category.type }),
         label: {
           CategoryCell(category: category)
         })

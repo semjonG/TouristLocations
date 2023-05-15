@@ -18,7 +18,7 @@ struct RstTur: Codable {
 struct DataClass: Codable {
   let geo: Coordinates
   let categories: [Category]
-  let objects: [Object]
+  let objects: [PlaceLocation]
 }
 
 struct Category: Codable {
@@ -40,7 +40,7 @@ struct Coordinates: Codable {
   let lon: Double
 }
 
-struct Object: Codable {
+struct PlaceLocation: Codable {
   let name: String
   let description: String
   let image: String

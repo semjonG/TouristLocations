@@ -1,5 +1,5 @@
 //
-//  CategoryViewModel.swift
+//  MainViewModel.swift
 //  TouristLocations
 //
 //  Created by mac on 12.05.2023.
@@ -8,13 +8,13 @@
 import SwiftUI
 import Combine
 
-final class CategoryViewModel: ObservableObject {
+final class MainViewModel: ObservableObject {
   
   private let networkManager = NetworkManager()
   
   @Published var isLoading = false
   @Published var categories: [CategoryCellModel] = []
-  @Published var tours: [LocationsCellModel] = []
+  @Published var locations: [LocationsCellModel] = []
   @Published var error: IdentifiableError<HTTPError>?
   
   struct IdentifiableError<E: Error>: Identifiable {
@@ -23,12 +23,12 @@ final class CategoryViewModel: ObservableObject {
   }
   
   init() {
-    fetch()
+    fetchData()
   }
   
-  func fetch() {
+  func fetchData() {
     error = nil
-    let responseData = networkManager.fetch(decoding: RstTur.self)
+    let responseData = networkManager.sendRequest(decoding: RstTur.self)
       .handleEvents(
         receiveSubscription: { [unowned self] _ in
           isLoading = true
@@ -45,7 +45,7 @@ final class CategoryViewModel: ObservableObject {
           RstTur(data: DataClass(
             geo: Coordinates(lat: 0.02, lon: 9.2),
             categories: [Category(name: "", type: .child, colour: .danger10, count: 4)],
-            objects: [Object(name: "", description: "", image: "", type: .child, lat: 0.3, lon: 0.4)])
+            objects: [PlaceLocation(name: "", description: "", image: "", type: .child, lat: 0.3, lon: 0.4)])
           )
         )
       }
@@ -59,8 +59,8 @@ final class CategoryViewModel: ObservableObject {
     
     responseData
       .flatMap { $0.data.objects.publisher }
-      .map { LocationsCellModel(tour: $0) }
+      .map { LocationsCellModel(place: $0) }
       .collect()
-      .assign(to: &$tours)
+      .assign(to: &$locations)
   }
 }

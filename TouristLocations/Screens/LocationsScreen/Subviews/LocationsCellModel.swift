@@ -9,22 +9,22 @@ import SwiftUI
 
 final class LocationsCellModel: ObservableObject, Identifiable {
   
-  let tour: Object
-  @Published var tourImage: UIImage?
+  let placeLocation: PlaceLocation
+  @Published var placeImage: UIImage?
   
-  var name: String { tour.name }
-  var description: String { tour.description }
-  var imageURL: URL { URL(string: tour.image)! }
-  var latitude: Double { tour.lat }
-  var longitude: Double { tour.lon }
-  var type: TypeEnum { tour.type }
+  var name: String { placeLocation.name }
+  var description: String { placeLocation.description }
+  var imageURL: URL { URL(string: placeLocation.image)! }
+  var latitude: Double { placeLocation.lat }
+  var longitude: Double { placeLocation.lon }
+  var type: TypeEnum { placeLocation.type }
 
   static var defaultImage: UIImage {
     UIImage(named: "placeholder")!
   }
   
-  init(tour: Object) {
-    self.tour = tour
+  init(place: PlaceLocation) {
+    self.placeLocation = place
   }
   
   func fetchImage() {
@@ -34,7 +34,7 @@ final class LocationsCellModel: ObservableObject, Identifiable {
       .receive(on: DispatchQueue.main)
       .map { UIImage(data: $0) }
       .replaceError(with: Self.defaultImage)
-      .assign(to: &$tourImage)
+      .assign(to: &$placeImage)
   }
 }
 

@@ -12,7 +12,7 @@
 		044DBDD02A0E351D00FCF4E8 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDCF2A0E351D00FCF4E8 /* CategoryView.swift */; };
 		044DBDD42A0E35CB00FCF4E8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDD32A0E35CB00FCF4E8 /* CategoryCell.swift */; };
 		044DBDD62A0E360300FCF4E8 /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDD52A0E360300FCF4E8 /* CategoryCellModel.swift */; };
-		044DBDD82A0E362000FCF4E8 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDD72A0E362000FCF4E8 /* CategoryViewModel.swift */; };
+		044DBDD82A0E362000FCF4E8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDD72A0E362000FCF4E8 /* MainViewModel.swift */; };
 		044DBDDA2A0E366600FCF4E8 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDD92A0E366600FCF4E8 /* LocationsView.swift */; };
 		044DBDDC2A0E368900FCF4E8 /* LocationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDDB2A0E368900FCF4E8 /* LocationsCell.swift */; };
 		044DBDDE2A0E36A700FCF4E8 /* LocationsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDDD2A0E36A700FCF4E8 /* LocationsCellModel.swift */; };
@@ -31,7 +31,7 @@
 		044DBDCF2A0E351D00FCF4E8 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		044DBDD32A0E35CB00FCF4E8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		044DBDD52A0E360300FCF4E8 /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
-		044DBDD72A0E362000FCF4E8 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		044DBDD72A0E362000FCF4E8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		044DBDD92A0E366600FCF4E8 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		044DBDDB2A0E368900FCF4E8 /* LocationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCell.swift; sourceTree = "<group>"; };
 		044DBDDD2A0E36A700FCF4E8 /* LocationsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCellModel.swift; sourceTree = "<group>"; };
@@ -40,6 +40,7 @@
 		044DBDE32A0E37A200FCF4E8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		044DBDE52A0E381600FCF4E8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		044DBDE72A0E383B00FCF4E8 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
+		0453CA352A115F4900742D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04CFADEE2A0E4DE200FC7CAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,10 +74,12 @@
 		044DBDBA2A0E337A00FCF4E8 /* TouristLocations */ = {
 			isa = PBXGroup;
 			children = (
+				0453CA352A115F4900742D22 /* Info.plist */,
 				044DBDBB2A0E337A00FCF4E8 /* TouristLocationsApp.swift */,
 				04CFADF02A0E57EE00FC7CAF /* Screens */,
+				0453CA302A11235000742D22 /* ViewModels */,
 				044DBDCC2A0E347F00FCF4E8 /* DomainModels */,
-				044DBDCD2A0E348B00FCF4E8 /* NetworkingLayer */,
+				0453CA312A1140D500742D22 /* Services */,
 				044DBDCE2A0E349D00FCF4E8 /* Extensions */,
 				04CFADED2A0E4DE200FC7CAF /* Preview Content */,
 				044DBDC92A0E33A600FCF4E8 /* Resources */,
@@ -96,9 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				044DBDCF2A0E351D00FCF4E8 /* CategoryView.swift */,
-				044DBDD32A0E35CB00FCF4E8 /* CategoryCell.swift */,
-				044DBDD52A0E360300FCF4E8 /* CategoryCellModel.swift */,
-				044DBDD72A0E362000FCF4E8 /* CategoryViewModel.swift */,
+				0453CA2F2A10C8BF00742D22 /* Subviews */,
 			);
 			path = CategoryScreen;
 			sourceTree = "<group>";
@@ -107,8 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				044DBDD92A0E366600FCF4E8 /* LocationsView.swift */,
-				044DBDDB2A0E368900FCF4E8 /* LocationsCell.swift */,
-				044DBDDD2A0E36A700FCF4E8 /* LocationsCellModel.swift */,
+				0453CA2E2A10C8B500742D22 /* Subviews */,
 			);
 			path = LocationsScreen;
 			sourceTree = "<group>";
@@ -137,6 +137,40 @@
 				044DBDE52A0E381600FCF4E8 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0453CA2E2A10C8B500742D22 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				044DBDDB2A0E368900FCF4E8 /* LocationsCell.swift */,
+				044DBDDD2A0E36A700FCF4E8 /* LocationsCellModel.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0453CA2F2A10C8BF00742D22 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				044DBDD32A0E35CB00FCF4E8 /* CategoryCell.swift */,
+				044DBDD52A0E360300FCF4E8 /* CategoryCellModel.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0453CA302A11235000742D22 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				044DBDD72A0E362000FCF4E8 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0453CA312A1140D500742D22 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				044DBDCD2A0E348B00FCF4E8 /* NetworkingLayer */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		04CFADED2A0E4DE200FC7CAF /* Preview Content */ = {
@@ -234,7 +268,7 @@
 				044DBDD42A0E35CB00FCF4E8 /* CategoryCell.swift in Sources */,
 				044DBDBC2A0E337A00FCF4E8 /* TouristLocationsApp.swift in Sources */,
 				044DBDE62A0E381600FCF4E8 /* Color+Extensions.swift in Sources */,
-				044DBDD82A0E362000FCF4E8 /* CategoryViewModel.swift in Sources */,
+				044DBDD82A0E362000FCF4E8 /* MainViewModel.swift in Sources */,
 				044DBDDA2A0E366600FCF4E8 /* LocationsView.swift in Sources */,
 				044DBDD62A0E360300FCF4E8 /* CategoryCellModel.swift in Sources */,
 				044DBDE42A0E37A200FCF4E8 /* NetworkManager.swift in Sources */,
@@ -374,6 +408,8 @@
 				DEVELOPMENT_TEAM = 8RR9M64TNW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TouristLocations/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Ваша текущая геолокация может быть передана в приложение 2GIS для построения маршрута к местам отдыха";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,6 +443,8 @@
 				DEVELOPMENT_TEAM = 8RR9M64TNW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TouristLocations/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Ваша текущая геолокация может быть передана в приложение 2GIS для построения маршрута к местам отдыха";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

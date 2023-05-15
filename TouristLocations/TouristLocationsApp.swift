@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 @main
 struct TouristLocationsApp: App {
   var body: some Scene {
     WindowGroup {
       CategoryView()
+        .onAppear() {
+          CLLocationManager().requestWhenInUseAuthorization()
+        }
         .preferredColorScheme(.dark)
     }
   }

@@ -15,7 +15,7 @@ final class NetworkManager {
   
   init() {}
   
-  func fetch<Model: Decodable>(decoding: Model.Type) -> AnyPublisher<Model, HTTPError> {
+  func sendRequest<Model: Decodable>(decoding: Model.Type) -> AnyPublisher<Model, HTTPError> {
     guard let url = URL(string: urlString) else {
       fatalError("Invalid URL")
     }

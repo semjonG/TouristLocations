@@ -5,8 +5,8 @@
 //  Created by mac on 12.05.2023.
 //
 
-import Combine
 import Foundation
+import Combine
 
 extension Publisher where Output == (data: Data, response: URLResponse) {
   func assumeHTTP() -> AnyPublisher<(data: Data, response: HTTPURLResponse), HTTPError> {

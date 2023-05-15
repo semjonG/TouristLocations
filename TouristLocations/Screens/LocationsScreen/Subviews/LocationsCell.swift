@@ -16,18 +16,21 @@ struct LocationsCell: View {
       VStack(alignment: .leading) {
         Text(placeLocation.name)
           .font(.headline)
+          .fixedSize(horizontal: false, vertical: true)
+          .lineLimit(2)
         Text(placeLocation.description)
           .font(.subheadline)
+          .lineLimit(2)
         Spacer()
       }
-      .padding(.all, 10.0)
-      .frame(height: 100, alignment: .center)
+      .padding(.all, 8)
+      .frame(height: 86, alignment: .center)
     }
   }
   
   private var image: some View {
     Group {
-      if let image = placeLocation.tourImage {
+      if let image = placeLocation.placeImage {
         Image(uiImage: image)
           .resizable()
           .clipped()
@@ -37,9 +40,9 @@ struct LocationsCell: View {
           .onAppear { placeLocation.fetchImage() }
       }
     }
-    .frame(width: 100, height: 80)
-    .cornerRadius(10)
-    .padding(.all, 10.0)
+    .frame(width: 86, height: 62)
+    .cornerRadius(8)
+    .scaledToFit()
   }
 }
 
