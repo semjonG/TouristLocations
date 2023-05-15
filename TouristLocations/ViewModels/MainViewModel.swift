@@ -19,7 +19,7 @@ final class MainViewModel: ObservableObject {
   
   struct IdentifiableError<E: Error>: Identifiable {
     let id = UUID()
-    let error: E
+    let identifiableError: E
   }
   
   init() {
@@ -40,7 +40,7 @@ final class MainViewModel: ObservableObject {
           isLoading = false
         })
       .catch { [unowned self] error -> Just<RstTur> in
-        self.error = IdentifiableError(error: error )
+        self.error = IdentifiableError(identifiableError: error )
         return Just(
           RstTur(data: DataClass(
             geo: Coordinates(lat: 0.02, lon: 9.2),

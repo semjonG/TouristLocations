@@ -20,10 +20,10 @@ struct CategoryView: View {
           categories
         }
       }
-      .alert(item: $viewModel.error, content: { e -> Alert in
+      .alert(item: $viewModel.error, content: { error -> Alert in
         Alert(
           title: Text("Unable to load Data"),
-          message: Text(e.error.description),
+          message: Text(error.identifiableError.description),
           primaryButton: .default(Text("Retry"), action: {
             self.viewModel.fetchData()
           }),
