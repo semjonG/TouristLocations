@@ -21,6 +21,7 @@
 		044DBDE42A0E37A200FCF4E8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDE32A0E37A200FCF4E8 /* NetworkManager.swift */; };
 		044DBDE62A0E381600FCF4E8 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDE52A0E381600FCF4E8 /* Color+Extensions.swift */; };
 		044DBDE82A0E383B00FCF4E8 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DBDE72A0E383B00FCF4E8 /* Publisher+Extensions.swift */; };
+		0453CA382A1235BB00742D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0453CA372A1235BB00742D22 /* LaunchScreen.storyboard */; };
 		04CFADEF2A0E4DE200FC7CAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CFADEE2A0E4DE200FC7CAF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		044DBDE52A0E381600FCF4E8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		044DBDE72A0E383B00FCF4E8 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		0453CA352A115F4900742D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0453CA372A1235BB00742D22 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CFADEE2A0E4DE200FC7CAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0453CA362A122C8E00742D22 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0453CA372A1235BB00742D22 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		04CFADED2A0E4DE200FC7CAF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 		04CFADF02A0E57EE00FC7CAF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0453CA362A122C8E00742D22 /* LaunchScreen */,
 				044DBDCA2A0E346500FCF4E8 /* CategoryScreen */,
 				044DBDCB2A0E347200FCF4E8 /* LocationsScreen */,
 			);
@@ -248,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0453CA382A1235BB00742D22 /* LaunchScreen.storyboard in Resources */,
 				04CFADEF2A0E4DE200FC7CAF /* Preview Assets.xcassets in Resources */,
 				044DBDC02A0E337B00FCF4E8 /* Assets.xcassets in Resources */,
 			);
@@ -412,7 +424,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Ваша текущая геолокация может быть передана в приложение 2GIS для построения маршрута к местам отдыха";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -447,7 +459,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Ваша текущая геолокация может быть передана в приложение 2GIS для построения маршрута к местам отдыха";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
